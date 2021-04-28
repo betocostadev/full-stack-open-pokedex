@@ -12,3 +12,9 @@ jobs:
       - name: Say hello
         run: |
           echo "Hello World!"
+  date_and_dir_job:
+    runs-on: ubuntu-18.04
+    steps:
+      - name: Say date and dir
+      run: |
+      date && ls
