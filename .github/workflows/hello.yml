@@ -16,5 +16,5 @@ jobs:
     runs-on: ubuntu-18.04
     steps:
       - name: Say date and dir
-      run: |
-      date && ls
+        run: |
+        date && ls
