@@ -17,4 +17,4 @@ jobs:
     steps:
       - name: Say date and dir
         run: |
-        date && ls
+          date && ls
