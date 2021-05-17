@@ -18,11 +18,13 @@ jobs:
         env:
           COMMITS: ${{ toJson(github.event.commits) }}
         run: echo "$COMMITS"
-        if: ${{ github.event.commits.*.message == '#skip' }}
-        run: echo "Contem"
       - name: commit messages
         env:
           COMMIT_MESSAGES: ${{ toJson(github.event.commits.*.message) }}
         run: echo "$COMMIT_MESSAGES"
       - name: check for commit skip
+        env:
+          COMMITS: ${{ toJson(github.event.commits) }}
+        if: ${{ github.event.commits.*.message == '#skip' }}
+        run: echo "Contem"
 
